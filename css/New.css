@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* section */
+section nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 30%;
+  float: left;
+  margin: -3px 0 0 30px;
+}
+
+section nav ul {
+  list-style: none;
+  width: 34%;
+  float: left;
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+.icons {
+  width: 100px;
+
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+section nav .logo img {
+  width: 100px;
+  height: 49px;
+  margin: 7px 0;
+}
+section nav ul {
+  list-style: none;
+}
+section nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+section nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+section nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fac031;
+  display: block;
+  transition: 0.5s linear;
+}
+section nav ul li a:hover::after {
+  width: 100%;
+}
+section nav ul li a:hover {
+  color: #fac031;
+}
+section nav .icons i {
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 5px;
+}
+section nav .icons i:hover {
+  color: #fac031;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  height: 700px;
+}
+
+.container-left {
+  width: 80%;
+  float: left;
+}
+iframe {
+  width: 100%;
+  height: 700px;
+}
+.container-right {
+  width: 20%;
+  float: right;
+  height: 700px;
+}
+.container-right img {
+  width: 100%;
+  height: calc(690px / 3);
+  object-fit: cover;
+  padding: 5px;
+}
+
+.list {
+  width: 100%;
+  height: 100%;
+  margin: 90px 0;
+}
+.text-c {
+  color: #fac031;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.list .list-container {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  margin-top: 20px;
+}
+.list .list-container .list-wrap {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  height: 400px;
+  position: relative;
+  margin: 30px 0;
+}
+.list-card-l {
+  width: 50%;
+  float: left;
+  height: 100%;
+}
+
+.list .list-container .list-wrap .list-card-l img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  cursor: pointer;
+}
+.list .list-container .list-wrap .list-card-r {
+  width: calc(50% - 30px);
+  float: right;
+  height: 100%;
+}
+.list .list-container .list-wrap .list-card-r a {
+  text-decoration: none;
+}
+.list .list-container .list-wrap .list-card-r a h3 {
+  color: #222f33;
+
+  position: absolute;
+  top: 6%;
+  font-size: 20px;
+}
+.list .list-container .list-wrap .list-card-r a h3 strong {
+  color: #fac031;
+}
+.list .list-container .list-wrap .list-card-r a p {
+  color: gray;
+  position: absolute;
+  top: 30%;
+  font-size: 16px;
+}
+.menu-btn {
+  padding: 8px 40px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.menu-btn:hover {
+  background: #fac031;
+  transition: all 0.3s;
+}
+
+footer {
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 30px 0;
+  height: 300px;
+  clear: both;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer .footer-main .footer-tag {
+  text-align: center;
+  line-height: 22px;
+  width: 20%;
+  float: left;
+}
+.footer-main {
+  height: 100%;
+}
+footer .footer-main .footer-tag h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+footer .footer-main .footer-tag a {
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+}
+footer .footer-main .footer-tag a {
+  margin: 10px;
+  color: #222f33;
+}
+footer .footer-main .footer-tag a:hover {
+  background: orange;
+  width: 50%;
+  color: antiquewhite;
+}
+footer .end {
+  text-align: center;
+  line-height: 22px;
+}
+footer .end span {
+  color: #fac031;
+  padding: 15px;
+}
