@@ -9,7 +9,7 @@ link -> https://levanquyyy.github.io/foodhub/
 --bên trang About sẽ giới thiệu về đầu bếp nhà hàng - địa chỉ sẽ đc để dưới Footer
 --về phần Menu&Oder trên nav sẽ chỉ hoạt động khi ở trang Home
 --về mục New thì sẽ gợi ý những món đặc sắc của nhà hàng bằng vid quay nấu trực tiếp và ở dưới sẽ là những món khác --khi click vào Oder now sẽ chuyển qua trang Review
-
+--do chưa biết nhiều về js nên không thể cho chạy video ở section đầu tiên của trang About
 
 
 
