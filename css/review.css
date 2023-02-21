@@ -4,6 +4,79 @@
   box-sizing: border-box;
 }
 
+nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 30%;
+  float: left;
+  margin: -3px 0 0 30px;
+}
+
+nav ul {
+  list-style: none;
+  width: 34%;
+  float: left;
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+.icons {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  color: #333;
+
+  top: 25px;
+}
+
+nav .logo img {
+  width: 100px;
+  height: 49px;
+  margin: 7px 0;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+
+  font-weight: 900;
+  font-size: 17px;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #fac031;
+  display: block;
+  transition: 0.5s linear;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+nav ul li a:hover {
+  color: #fac031;
+}
+nav .icons i {
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0 5px;
+}
+nav .icons i:hover {
+  color: #fac031;
+  cursor: pointer;
+}
 h1 {
   font-size: 55px;
   text-align: center;
@@ -94,4 +167,49 @@ h1 span::after {
 .add-cart:hover {
   background: #fac031;
   transition: all 0.3s;
+}
+
+footer {
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 30px 0;
+  height: 300px;
+  clear: both;
+  text-align: center;
+}
+
+footer .footer-main .footer-tag {
+  text-align: center;
+  line-height: 22px;
+  width: 20%;
+  float: left;
+}
+.footer-main {
+  height: 100%;
+}
+footer .footer-main .footer-tag h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+footer .footer-main .footer-tag a {
+  margin: 10px;
+  display: block;
+  text-decoration: none;
+}
+footer .footer-main .footer-tag a {
+  color: #222f33;
+  margin: 10px;
+}
+footer .footer-main .footer-tag a:hover {
+  background: orange;
+  width: 50%;
+  color: antiquewhite;
+}
+footer .end {
+  text-align: center;
+  line-height: 22px;
+}
+footer .end span {
+  color: #fac031;
+  padding: 15px;
 }
