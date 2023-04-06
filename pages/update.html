@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/update.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#"> <img src="../image/logo.png" alt="logo" /></a>
+      </div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/About.html">About</a></li>
+        <li><a href="#Menu">Menu</a></li>
+
+        <li><a href="#Order">Order</a></li>
+        <li><a href="../pages/New.html">New</a></li>
+      </ul>
+      <div class="icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </nav>
+
+    <div class="delivery">
+      <div class="delivery-container">
+        <div class="delivery-l">
+          <div class="delivery-top">
+            <form action="#">
+              <div class="input">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="your name"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="Number">Number:</label>
+                <input
+                  type="text"
+                  id="Number"
+                  name="number"
+                  placeholder="your Number"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="Email">Email:</label>
+                <input
+                  type="text"
+                  id="Email"
+                  name="email"
+                  placeholder="your Email"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="City">City:</label>
+                <input
+                  type="text"
+                  id="City"
+                  name="city"
+                  placeholder="your City"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="State">State:</label>
+                <input
+                  type="text"
+                  id="State"
+                  name="state"
+                  placeholder="your State"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="Zip">Zip:</label>
+                <input
+                  type="Zip"
+                  id="Zip"
+                  name="zip"
+                  placeholder="90250"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="select-field">State:</label>
+                <select id="select-field" name="fruit">
+                  <option value="apple">CA</option>
+                  <option value="banana">NY</option>
+                  <option value="orange">PS</option>
+                </select>
+              </div>
+              <div class="input">
+                <label for="Address">Address:</label>
+                <input
+                  type="text"
+                  id="Address"
+                  name="address"
+                  placeholder="23/20..."
+                  required
+                />
+              </div>
+            </form>
+          </div>
+
+          <div class="delivery-mid">
+            <form action="#">
+              <div class="delivery-input">
+                <label for="date">Dates:</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <div class="delivery-input">
+                <label for="Note">Note:</label>
+                <input
+                  type="text"
+                  id="Note"
+                  name="Note"
+                  placeholder="Type Your Note"
+                />
+              </div>
+            </form>
+          </div>
+          <h3>Payment Method:</h3>
+
+          <div class="delivery-bt">
+            <label>
+              <input type="radio" name="choice" value="option1" />
+              <span>Online Payment</span>
+            </label>
+            <label>
+              <input type="radio" name="choice" value="option2" />
+              <span>Cash on Delivery</span>
+            </label>
+            <label>
+              <input type="radio" name="choice" value="option3" />
+              <span>POS on Delivery</span>
+            </label>
+          </div>
+        </div>
+        <div class="delivery-r">
+          <div class="delivery-r--container"></div>
+
+          <div class="delivery-card--bt">
+            <h3>Total(USD)</h3>
+            <p class="delivery-total"></p>
+            <button class="confirm" onclick="submit()">Confirm Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- printf  -->
+      <div class="card">
+        <div class="tools">
+          <div class="circle">
+            <span class="red box"></span>
+          </div>
+          <div class="circle">
+            <span class="yellow box"></span>
+          </div>
+          <div class="circle">
+            <span class="green box"></span>
+          </div>
+        </div>
+        <div class="card__content">
+          <!-- in thông tin nv & tt khách hàng -->
+          <h2>-- Bill Payment --</h2>
+          <div class="printf-code">
+            <div class="printf-code--l">
+              <p style="color: gray">Mã Bill:</p>
+            </div>
+            <div class="printf-code--r">
+              <p>####092133488499-99</p>
+            </div>
+
+            <p></p>
+          </div>
+
+          <div class="printf-code">
+            <div class="printf-code--l">
+              <p style="color: gray">Tên cửa hàng:</p>
+            </div>
+            <div class="printf-code--r">
+              <p>FoodHub</p>
+            </div>
+
+            <p></p>
+          </div>
+          <div class="printf-code">
+            <div class="printf-code--l">
+              <p style="color: gray">Nhân viên trực ca:</p>
+            </div>
+            <div class="printf-code--r">
+              <p>Lê Văn Quý</p>
+            </div>
+
+            <p></p>
+          </div>
+          <div class="printf-code">
+            <div class="printf-code--l">
+              <p style="color: gray">ID nhân viên trực ca:</p>
+            </div>
+            <div class="printf-code--r">
+              <p>##020103##</p>
+            </div>
+
+            <p></p>
+          </div>
+
+          <h3>-- Thông tin khách hàng --</h3>
+
+          <div class="card_food__wrap">
+            <h3>-- Thông tin Món ăn --</h3>
+
+            <h3 class="quantity-f">Số lượng</h3>
+          </div>
+        </div>
+
+        <div class="printf">
+          <button class="btn-printf" onclick="closee()">
+            <p class="printf_price"></p>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/update.js"></script>
+  </body>
+</html>

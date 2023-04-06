@@ -35,7 +35,7 @@ section nav ul {
   width: 100px;
 
   position: absolute;
-  right: 0;
+  right: 40px;
   top: 25px;
 }
 section nav .logo img {
@@ -246,6 +246,9 @@ section .main-button:hover i {
   object-position: center;
   transition: 0.2s;
 }
+.menu .menu-box .menu-card .menu-info {
+  padding: 0 12px;
+}
 
 .menu .menu-box .menu-card .menu-info h2 {
   font-size: 25px;
@@ -253,6 +256,9 @@ section .main-button:hover i {
   text-transform: capitalize;
   text-align: center;
   margin: 10px 0;
+}
+.menu .menu-box .menu-card .menu-info strong {
+  padding: 10px;
 }
 .menu .menu-box .menu-card .menu-info p {
   line-height: 21px;
