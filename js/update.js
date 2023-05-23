@@ -59,7 +59,10 @@ if (true) {
       value--;
 
       input.value = value;
-
+      if (value < 1) {
+        const product = minus_btn.closest(".delivery-card");
+        product.remove(); // xóa sản phẩm ra khỏi DOM
+      }
       // xét thêm một giá trị index cho ô input vì lúc này chúng ta muốn lấy chính xác số tiền của từng sản phẩm bằng cách thông qua từng dấu - ta click vào thì ta sẽ biết được số index của nó chúng ta đã innerHtml ở trên
       // sau khi lấy được chính xác từng giá tiền thì chúng ta phải chắc chắn rằng nó là số và k dính bất cứ giá trị khác
       // ví dụ $ , %, ^ nên phải có bước replace các giá trị đó
@@ -79,7 +82,7 @@ if (true) {
       // sau khi xóa chúng ta cập nhật lại sản phẩm trên local
       // dùng closest để tìm ra class cha gần nhất cụ thể là spile ở vị trí nào thì chúng ta sẽ lấy phần tử cha ngay vị trí nhờ closet và xóa luôn cả 1 class ra khỏi DOM
 
-      if (value <= 0) {
+      if (value < 1) {
         products.splice(index, 1);
         localStorage.setItem("cartItems", JSON.stringify(products)); // lưu lại vào localStorage
         const product = minus_btn.closest(".delivery-card");

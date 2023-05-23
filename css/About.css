@@ -21,32 +21,28 @@ section {
   position: relative;
   background-image: url(../image/daubep.jpg);
 }
+
 section nav {
-  position: relative;
   width: 100%;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-  width: 30%;
-  float: left;
   margin: -3px 0 0 30px;
 }
 
 section nav ul {
   list-style: none;
-  width: 34%;
-  float: left;
-  margin: 25px 0 0 0;
+  display: inline-block;
   text-align: center;
 }
 .icons {
   width: 100px;
-  position: absolute;
-  right: 40px;
-  color: white;
-  top: 25px;
+  color: #eeeeee;
 }
 
 section nav .logo img {
@@ -223,23 +219,20 @@ section nav .icons i:hover {
 }
 
 .box-bt {
-  position: absolute;
-  bottom: 5%;
-  width: 1100px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  height: 282px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .box-bt h3 {
   font-size: 30px;
 }
 .box-btl {
-  width: 50%;
-  float: left;
-  margin-right: calc(50%-50px);
+  width: 35%;
 }
 .box-btr {
-  width: 50%;
-  float: left;
+  width: 35%;
 }
 
 .box-btr,
@@ -258,26 +251,28 @@ h3 {
 .about-chef-container {
   width: 95%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .about-chef-container .about-chef-r {
   width: 50%;
-  float: left;
+  margin-right: 40px;
 }
 .about-chef-container .about-chef-r img {
   width: 100%;
   height: 400px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 50px;
 }
 .about-chef-l {
   width: 50%;
   height: 400px;
-  float: right;
 }
 .about-chef-l .about-content {
   width: 50%;
-  float: left;
   height: 33.333%;
 }
 .about-chef-l .about-content h3 {
@@ -306,10 +301,12 @@ footer .footer-main .footer-tag {
   text-align: center;
   line-height: 22px;
   width: 20%;
-  float: left;
 }
 .footer-main {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 footer .footer-main .footer-tag h2 {
   margin-bottom: 25px;

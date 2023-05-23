@@ -5,32 +5,25 @@
 }
 
 nav {
-  position: relative;
   width: 100%;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-  width: 30%;
-  float: left;
   margin: -3px 0 0 30px;
 }
 
 nav ul {
   list-style: none;
-  width: 34%;
-  float: left;
-  margin: 25px 0 0 0;
+  display: inline-block;
   text-align: center;
 }
 .icons {
   width: 100px;
-  position: absolute;
-  right: 40px;
-  color: #333;
-
-  top: 25px;
 }
 
 nav .logo img {
@@ -99,10 +92,13 @@ h1 span::after {
   width: 95%;
   margin: 0 auto;
   min-height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .review-card .review-left {
   width: calc(50% - 30px);
-  float: left;
+  height: 873.92px;
 }
 .review-card .review-left img {
   width: 100%;
@@ -110,8 +106,7 @@ h1 span::after {
 }
 .review-card .review-right {
   width: calc(50% - 30px);
-  height: 583px;
-  float: right;
+  height: 873.92px;
   position: relative;
 }
 
@@ -177,15 +172,17 @@ footer {
   clear: both;
   text-align: center;
 }
+.footer-main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 footer .footer-main .footer-tag {
   text-align: center;
   line-height: 22px;
   width: 20%;
-  float: left;
-}
-.footer-main {
-  height: 100%;
 }
 footer .footer-main .footer-tag h2 {
   margin-bottom: 25px;

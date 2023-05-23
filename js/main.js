@@ -3,6 +3,13 @@
 // set các link đã được gán cứng ở từng nút thông qua data-set lên local
 // khi lưu xong chuyển người dùng qua link bằng thẻ a.href
 const menuButtons = document.querySelectorAll(".menu-btn");
+const loadmore = document.querySelector(".main-button2");
+const menubox = document.querySelector(".menu-box");
+
+loadmore.addEventListener("click", (e) => {
+  menubox.style.height = "100%";
+  e.preventDefault();
+});
 
 menuButtons.forEach((button) => {
   button.addEventListener("click", (event) => {

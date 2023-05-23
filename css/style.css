@@ -12,31 +12,25 @@ section {
   height: 100vh;
 }
 section nav {
-  position: relative;
   width: 100%;
   height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-  width: 30%;
-  float: left;
   margin: -3px 0 0 30px;
 }
 
 section nav ul {
   list-style: none;
-  width: 34%;
-  float: left;
-  margin: 25px 0 0 0;
+  display: inline-block;
   text-align: center;
 }
 .icons {
   width: 100px;
-
-  position: absolute;
-  right: 40px;
-  top: 25px;
 }
 section nav .logo img {
   width: 100px;
@@ -83,14 +77,15 @@ section nav .icons i:hover {
 section .main {
   width: 95%;
   height: 100vh;
-  clear: both;
   position: relative;
   top: 50px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .main-text {
-  width: 47.5%;
-  float: left;
+  width: 50%;
 }
 section .main .main-text h1 {
   font-size: 60px;
@@ -104,12 +99,12 @@ section .main .main-text p {
   height: 132px;
 }
 .main-img {
-  width: 47.5%;
-  float: right;
+  width: 50%;
 }
 section .main .main-img img {
-  width: 700px;
-  height: 567px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 section .main-button {
   background: #fac031;
@@ -122,8 +117,30 @@ section .main-button {
 
   text-align: center;
   position: absolute;
-  top: 70%;
-  left: 30px;
+  bottom: 0;
+  left: 2%;
+}
+.main-button2 {
+  background: #fac031;
+  padding: 15px 25px;
+  display: inline-block;
+
+  cursor: pointer;
+  width: 150px;
+  border-radius: 20px;
+
+  text-align: center;
+}
+.main-button2:hover i {
+  transform: translateX(7px);
+}
+
+.ct {
+  text-align: center;
+}
+.main-button2 a {
+  text-decoration: none;
+  color: #eeeeee;
 }
 section .main-button a {
   text-decoration: none;
@@ -141,21 +158,19 @@ section .main-button:hover i {
 #About {
   width: 100%;
   height: 100vh;
-
-  clear: both;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .about-img {
   width: 50%;
-  float: left;
 }
 #About .about-img img {
-  width: 800px;
-  height: 620px;
+  width: 100%;
+  height: 100%;
 }
 .about-text {
   width: 50%;
-  float: right;
-  margin-top: 10%;
 
   position: relative;
 }
@@ -202,7 +217,7 @@ section .main-button:hover i {
 /* menu */
 .menu {
   width: 100%;
-  height: 100vw;
+  height: 100%;
 }
 .menu h1 {
   font-size: 55px;
@@ -214,7 +229,12 @@ section .main-button:hover i {
 .menu .menu-box {
   width: 95%;
   margin: 0 auto;
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 700px;
+  overflow: hidden;
 }
 .menu .menu-box .menu-card {
   height: 480px;
@@ -222,18 +242,18 @@ section .main-button:hover i {
   padding: 10px 0 0 0;
   border-radius: 20px;
   position: relative;
-  width: calc(25% - 30px);
-  float: left;
+  width: 400px;
   margin: 15px;
 }
 .menu .menu-box .menu-card .menu-img {
-  width: 300px;
+  width: 100%;
   height: 245px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   cursor: pointer;
   border-radius: 20px;
+  margin: -10px 0;
 }
 .menu .menu-box .menu-card .menu-img:hover {
   scale: 1.1;
@@ -285,21 +305,17 @@ section .main-button:hover i {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  width: 100%;
+  text-align: center;
 }
 .menu .menu-box .menu-card .menu-info .menu-btn:hover {
   background: #fac031;
   transition: all 0.3s;
 }
 
-/* review */
-
 /* order */
 .order {
   width: 100%;
-  background-image: url(image/bg2.jpg);
-  background-size: cover;
-  background-position: center;
-  clear: both;
 }
 .order h1 {
   font-size: 55px;
@@ -310,28 +326,30 @@ section .main-button:hover i {
 }
 
 .order .order-box {
-  position: relative;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .order .order-box .order-box_left {
-  width: 600px;
-  height: 641px;
-  position: absolute;
-  left: 10%;
+  width: 50%;
+  height: 100%;
+
+  object-fit: cover;
 }
 .order .order-box .order-box_left img {
   width: 100%;
   height: 100%;
 }
 .order-box_right {
-  position: absolute;
-  right: 10%;
   width: 435px;
-  top: 30%;
+  display: inline-block;
 }
 .order .order-box form {
   position: relative;
   height: 400px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .order .order-box form .input label {
   line-height: 25px;
@@ -339,7 +357,7 @@ section .main-button:hover i {
 }
 .order .order-box form .input {
   margin: 5px;
-  float: right;
+
   display: inline;
 }
 .order .order-box form .input input {
@@ -356,15 +374,15 @@ section .main-button:hover i {
 .oder-btn {
   text-decoration: none;
   background: #fac031;
-  text-align: center;
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
   margin: 30px 0;
   display: inline-block;
   width: 100%;
-  position: absolute;
-  bottom: 90px;
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .oder-btn:hover {
   background: rgb(239, 124, 82);
@@ -379,16 +397,19 @@ footer {
   clear: both;
   text-align: center;
 }
+.footer-main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 footer .footer-main .footer-tag {
   text-align: center;
   line-height: 22px;
   width: 20%;
-  float: left;
 }
-.footer-main {
-  height: 100%;
-}
+
 footer .footer-main .footer-tag h2 {
   margin-bottom: 25px;
   font-size: 30px;
