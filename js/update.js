@@ -4,6 +4,12 @@ const delivery_r = document.querySelector(".delivery-r--container");
 const delivery_total = document.querySelector(".delivery-total");
 const products = JSON.parse(localStorage.getItem("cartItems")) || [];
 console.log(products);
+const burger = document.querySelector("#burger");
+const menu_mobile = document.querySelector(".menu-mobile");
+
+burger.addEventListener("click", () => {
+  menu_mobile.classList.toggle("show");
+});
 if (true) {
   // lặp qua từng hằng products để lấy từng dữ liệu theo thứ tự và in ra
   products.forEach((product, index) => {

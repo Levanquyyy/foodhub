@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 a {
   text-decoration: none;
@@ -14,12 +15,7 @@ html {
 section {
   width: 100%;
   font-weight: 900;
-  height: 1000px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  background-image: url(../image/daubep.jpg);
+  height: 800px;
 }
 
 section nav {
@@ -30,11 +26,72 @@ section nav {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+.section_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+.close-btn {
+  border: none;
+  right: var(--inline-padding-of-input);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--active-color);
+  opacity: 0;
+  visibility: hidden;
+}
+/* styling of input */
+.input {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
 
 .logo {
   margin: -3px 0 0 30px;
 }
 
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-color);
+}
+/* input background change in focus */
+.input:focus ~ .fancy-bg {
+  border: 1px solid #fac031;
+  background: var(--focus-input-bg-color);
+}
+
+.input:focus ~ .search {
+  fill: #fac031;
+}
+
+.input:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
 section nav ul {
   list-style: none;
   display: inline-block;
@@ -42,7 +99,70 @@ section nav ul {
 }
 .icons {
   width: 100px;
-  color: #eeeeee;
+  color: #000000;
+}
+
+.top_menu {
+  height: 100%;
+}
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
 }
 
 section nav .logo img {
@@ -52,6 +172,11 @@ section nav .logo img {
 }
 section nav ul {
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0 25px;
 }
 section nav ul li {
   display: inline-block;
@@ -59,7 +184,7 @@ section nav ul li {
 }
 section nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #000000;
   font-weight: 900;
   font-size: 17px;
   text-transform: capitalize;
@@ -89,24 +214,18 @@ section nav .icons i:hover {
   cursor: pointer;
 }
 .text-intro {
-  width: 628px;
-  color: rgb(255, 255, 255);
-  margin-left: 5%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
+  width: 50%;
+  color: #fac031;
   line-height: 50px;
 }
-.circle {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  display: grid;
-  place-content: center;
-  animation: grow 1s infinite;
-  color: #333;
+.text-intro-r {
+  width: 50%;
+  height: 100%;
+}
+.text-intro-r img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @keyframes grow {
@@ -118,29 +237,30 @@ section nav .icons i:hover {
   }
 }
 
-.text-intro-r {
-  position: absolute;
-  right: 30%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 /* box */
 .profile-chef {
-  width: 100%;
+  width: 95%;
   height: 681px;
   background: #222f33;
   position: relative;
+  margin: 0 auto;
 }
 .profile-chef .box-l {
-  width: 80%;
+  width: 95%;
   height: 400px;
   background: #ffffff;
   position: relative;
   z-index: 1;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 .profile-chef .box-l .box-l--content {
-  padding: 62px 116px 62px 100px;
+  width: 70%;
+  padding: 0 35px;
 }
 .profile-chef .box-l .box-l--content h3 {
   color: #222f33;
@@ -151,6 +271,24 @@ section nav .icons i:hover {
   line-height: 26px;
   color: #646d70;
   font-weight: 400;
+  width: 100%;
+}
+.box {
+  background: #ffffff;
+  width: 100%;
+  height: 223px;
+  position: absolute;
+  top: 0;
+}
+
+.box-img {
+  width: 30%;
+  height: 100%;
+}
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /* btn */
 .btn:link,
@@ -158,13 +296,14 @@ section nav .icons i:hover {
   text-transform: uppercase;
   text-decoration: none;
   color: rgb(27, 27, 27);
-  padding: 10px 30px;
+  padding: 15px 25px;
   border: 1px solid;
   border-radius: 1000px;
   display: inline-block;
   transition: all 0.2s;
-  position: relative;
-  top: 15px;
+  width: 30%;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .btn:hover {
@@ -195,35 +334,13 @@ section nav .icons i:hover {
   opacity: 0;
 }
 
-.box {
-  background: #ffffff;
-  width: 100%;
-  height: 223px;
-  position: absolute;
-  top: 0;
-}
-
-.box-img {
-  width: 325px;
-  height: 500px;
-  position: absolute;
-  top: -18%;
-  right: 100px;
-  z-index: 1;
-  right: 5%;
-}
-.box-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .box-bt {
   width: 100%;
   height: 282px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border-radius: 20px;
 }
 .box-bt h3 {
   font-size: 30px;
@@ -245,13 +362,12 @@ h3 {
 
 /* about chef */
 .about-chef {
-  height: 700px;
+  height: 100%;
   width: 100%;
 }
 .about-chef-container {
   width: 95%;
-  margin: 0 auto;
-  padding: 100px 0 0 0;
+  margin: 60px auto;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -260,20 +376,31 @@ h3 {
 .about-chef-container .about-chef-r {
   width: 50%;
   margin-right: 40px;
+  height: 100%;
 }
 .about-chef-container .about-chef-r img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
   border-radius: 50px;
 }
 .about-chef-l {
   width: 50%;
-  height: 400px;
+  height: 100%;
+  display: flex;
+  gap: 40px 0;
+  flex-wrap: wrap;
 }
 .about-chef-l .about-content {
-  width: 50%;
-  height: 33.333%;
+  flex: 0 0 calc(50% - 20px);
+  margin: 0 10px;
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  padding: 10px;
 }
 .about-chef-l .about-content h3 {
   font-size: 18px;
@@ -333,4 +460,165 @@ footer .end {
 footer .end span {
   color: #fac031;
   padding: 15px;
+}
+.menu-mobile {
+  width: 50%;
+  margin: 10px 190px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(300px);
+  max-height: 0;
+}
+.menu-mobile.show {
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  max-height: 370px;
+  position: fixed;
+  top: 55px;
+  background-color: #fac031;
+  z-index: 30;
+  right: -190px;
+}
+@media (max-width: 768px) {
+  section nav {
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    background-color: #eeeeee;
+    z-index: 15;
+  }
+  section nav .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  .logo {
+    margin: 0;
+  }
+  .search {
+    color: #fac031;
+  }
+  .fancy-bg {
+    background-color: #ffffff;
+  }
+  .input::placeholder {
+    color: #fac031;
+  }
+
+  .icons {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+
+  section nav .logo img {
+    margin: 0;
+  }
+  section {
+    height: 100%;
+  }
+  section nav ul li {
+    display: block;
+    background-color: red;
+  }
+  section nav ul {
+    display: none;
+  }
+  ul.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px 0;
+    margin-right: 30px;
+    text-align: end;
+  }
+  ul.menu-container li {
+    list-style: none;
+    width: 100%;
+  }
+  ul.menu-container li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .text-intro {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .text-intro h2 {
+    font-size: 20px;
+  }
+  .text-intro-r {
+    width: 100%;
+  }
+  .section_container {
+    flex-direction: column-reverse;
+  }
+  .profile-chef .box-l {
+    width: 100%;
+    height: 100%;
+    flex-direction: column-reverse;
+  }
+  .box-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile-chef .box-l .box-l--content {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .profile-chef .box-l .box-l--content p {
+    text-align: center;
+  }
+
+  .btn:link,
+  .btn:visited {
+    width: 100%;
+  }
+  .hide_mobile {
+    display: none;
+  }
+  .about-chef-container {
+    flex-direction: column;
+  }
+  .about-chef-container .about-chef-r {
+    width: 100%;
+    margin: 0;
+  }
+  .about-chef-l {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .about-chef-l .about-content {
+    text-align: center;
+    align-items: center;
+  }
+  .box-btr,
+  .box-btl p,
+  h3 {
+    margin: 0;
+  }
+  footer {
+    height: 100%;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+  }
+  footer .footer-main .footer-tag {
+    width: 100%;
+  }
 }

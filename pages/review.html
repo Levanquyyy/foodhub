@@ -30,17 +30,46 @@
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../pages/About.html">About</a></li>
-        <li><a href="#menu">Menu</a></li>
+        <li><a href="#Menu">Menu</a></li>
+
         <li><a href="#Order">Order</a></li>
         <li><a href="../pages/New.html">New</a></li>
       </ul>
+
       <div class="icons">
         <i class="fa-solid fa-magnifying-glass"></i>
         <i class="fa-solid fa-heart"></i>
         <i class="fa-solid fa-cart-shopping"></i>
       </div>
+
+      <!-- menu buger mobile -->
+      <label class="burger" for="burger">
+        <input type="checkbox" id="burger" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </nav>
-    <h1>Customer<span>Review</span></h1>
+    <div class="menu-mobile">
+      <ul class="menu-container">
+        <li class="menu-item">
+          <a href="/index.html" class="menu-link"> Home </a>
+        </li>
+        <li class="menu-item">
+          <a href="./pages/About.html" class="menu-link"> About </a>
+        </li>
+        <li class="menu-item">
+          <a href="#Menu" class="menu-link"> Menu </a>
+        </li>
+        <li class="menu-item">
+          <a href="#Order" class="menu-link"> Order </a>
+        </li>
+        <li class="menu-item">
+          <a href="./New.html" class="menu-link"> News </a>
+        </li>
+      </ul>
+    </div>
+    <h1 class="title">Customer<span>Review</span></h1>
     <div class="review-container">
       <div class="review-card">
         <div class="review-left">
@@ -68,8 +97,14 @@
             <li>cà chua</li>
             <li>sốt đặc biệt</li>
           </ul>
-          <a href="./update.html" class="menu-btn">oder now</a>
-          <a href="./update.html" class="add-cart">add to cart</a>
+          <div class="btns">
+            <div class="btn_oder">
+              <a href="./update.html" class="menu-btn">oder now</a>
+            </div>
+            <div class="btn_add">
+              <a href="./update.html" class="add-cart">add to cart</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

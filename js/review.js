@@ -8,7 +8,12 @@ const imageSrc = localStorage.getItem("imageSrc");
 const title = localStorage.getItem("title");
 const price = localStorage.getItem("price");
 const btn_add = document.querySelector(".add-cart");
+const burger = document.querySelector("#burger");
+const menu_mobile = document.querySelector(".menu-mobile");
 
+burger.addEventListener("click", () => {
+  menu_mobile.classList.toggle("show");
+});
 if (imageSrc && title) {
   const imageElement = document.querySelector("#cartItemImage");
   const titleElement = document.querySelector(".review-title");

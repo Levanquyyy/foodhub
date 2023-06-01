@@ -26,31 +26,69 @@
         <div class="logo">
           <a href="#"> <img src="../image/logo.png" alt="logo" /></a>
         </div>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../pages/About.html">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#Order">Order</a></li>
-          <li><a href="../pages/New.html">New</a></li>
-        </ul>
+        <div class="top_menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./pages/About.html">About</a></li>
+            <li><a href="#Menu">Menu</a></li>
+
+            <li><a href="#Order">Order</a></li>
+            <li><a href="./New.html">News</a></li>
+          </ul>
+        </div>
+
         <div class="icons">
           <i class="fa-solid fa-magnifying-glass"></i>
           <i class="fa-solid fa-heart"></i>
           <i class="fa-solid fa-cart-shopping"></i>
         </div>
-      </nav>
 
-      <div class="text-intro">
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maiores
-          nisi ab sint id, dolorum sit repellendus ipsa perferendis laborum vero
-          libero esse enim sequi odit eum error itaque nesciunt?
-        </h2>
+        <!-- menu buger mobile -->
+        <label class="burger" for="burger">
+          <input type="checkbox" id="burger" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </nav>
+      <div class="menu-mobile">
+        <ul class="menu-container">
+          <li class="menu-item">
+            <a href="/index.html" class="menu-link"> Home </a>
+          </li>
+          <li class="menu-item">
+            <a href="./pages/About.html" class="menu-link"> About </a>
+          </li>
+          <li class="menu-item">
+            <a href="#Menu" class="menu-link"> Menu </a>
+          </li>
+          <li class="menu-item">
+            <a href="#Order" class="menu-link"> Order </a>
+          </li>
+          <li class="menu-item">
+            <a href="./New.html" class="menu-link"> News </a>
+          </li>
+        </ul>
       </div>
 
-      <div class="text-intro-r">
-        <div class="circle">
-          <a href="#"> <i class="fa-solid fa-play circle"></i></a>
+      <div class="section_container">
+        <div class="text-intro">
+          <h2>
+            <strong> Lorem ipsum</strong>
+            dolor sit amet consectetur<br />
+            <p style="color: #000000; font-size: 20px">
+              adipisicing elit. Beatae, optio? Perspiciatis, vel repellat? Aut
+              magnam laboriosam aspernatur ipsam officia autem ratione! Impedit
+              voluptatibus ut temporibus modi. Temporibus amet maxime laboriosam
+              ad libero recusandae fugit, accusamus laudantium! Culpa, in illo
+              nulla tempora, magnam perspiciatis ipsum numquam dolore dolor
+              aspernatur, beatae eius?
+            </p>
+          </h2>
+        </div>
+
+        <div class="text-intro-r">
+          <img src="../image/pnj.png" alt="" />
         </div>
       </div>
     </section>
@@ -68,14 +106,14 @@
           </p>
           <a href="#" class="btn"> Click Me</a>
         </div>
+        <div class="box-img">
+          <img src="../image/box-img.avif" alt="" />
+        </div>
       </div>
-      <div class="box"></div>
-      <div class="box-img">
-        <img src="../image/box-img.avif" alt="" />
-      </div>
+
       <div class="box-bt">
         <div class="box-btl">
-          <p>
+          <p class="hide_mobile">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
             fugit quidem, officiis eius cum placeat earum excepturi aliquam,
             doloribus recusandae atque illo! Vitae dicta deserunt, ducimus
@@ -85,7 +123,7 @@
           </p>
         </div>
         <div class="box-btr">
-          <p>
+          <p class="hide_mobile">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore,
             dolorum possimus? Perferendis quas ipsam natus fugiat quos enim
             tempore exercitationem nobis sequi voluptate nostrum repellendus
@@ -206,5 +244,6 @@
         Design by<span><i class="fa-solid fa-face-grin"></i>!QUys</span>
       </a>
     </footer>
+    <script src="../js/main.js"></script>
   </body>
 </html>

@@ -6,6 +6,13 @@ const menuButtons = document.querySelectorAll(".menu-btn");
 const loadmore = document.querySelector(".main-button2");
 const menubox = document.querySelector(".menu-box");
 
+const burger = document.querySelector("#burger");
+const menu_mobile = document.querySelector(".menu-mobile");
+
+burger.addEventListener("click", () => {
+  menu_mobile.classList.toggle("show");
+});
+
 loadmore.addEventListener("click", (e) => {
   menubox.style.height = "100%";
   e.preventDefault();

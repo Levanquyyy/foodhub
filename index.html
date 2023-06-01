@@ -26,14 +26,18 @@
         <div class="logo">
           <a href="#"> <img src="./image/logo.png" alt="logo" /></a>
         </div>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="./pages/About.html">About</a></li>
-          <li><a href="#Menu">Menu</a></li>
 
-          <li><a href="#Order">Order</a></li>
-          <li><a href="./pages/New.html">New</a></li>
-        </ul>
+        <div class="top_menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./pages/About.html">About</a></li>
+            <li><a href="#Menu">Menu</a></li>
+
+            <li><a href="#Order">Order</a></li>
+            <li><a href="./pages/New.html">New</a></li>
+          </ul>
+        </div>
+
         <div class="icons">
           <i class="fa-solid fa-magnifying-glass"></i>
           <i class="fa-solid fa-heart"></i>
@@ -41,7 +45,35 @@
             ><i class="fa-solid fa-cart-shopping"></i
           ></a>
         </div>
+        <!-- menu buger mobile -->
+        <label class="burger" for="burger">
+          <input type="checkbox" id="burger" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </nav>
+
+      <div class="menu-mobile">
+        <ul class="menu-container">
+          <li class="menu-item">
+            <a href="/index.html" class="menu-link"> Home </a>
+          </li>
+          <li class="menu-item">
+            <a href="./pages/About.html" class="menu-link"> About </a>
+          </li>
+          <li class="menu-item">
+            <a href="#Menu" class="menu-link"> Menu </a>
+          </li>
+          <li class="menu-item">
+            <a href="#Order" class="menu-link"> Order </a>
+          </li>
+          <li class="menu-item">
+            <a href="./pages/New.html" class="menu-link"> News </a>
+          </li>
+        </ul>
+      </div>
+
       <div class="main">
         <div class="main-text">
           <h1>Get FreshFood <br />in a Easy Way</h1>
@@ -54,14 +86,14 @@
             eveniet ullam porro voluptate quas placeat qui blanditiis ex
             incidunt, eius doloremque hic eos fugit. Architecto.
           </a>
+          <div class="main-button">
+            <a href="#">Oder Now</a>
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
         </div>
         <div class="main-img">
           <img src="./image/main_img.png" alt="main-img" class />
         </div>
-      </div>
-      <div class="main-button">
-        <a href="#">Oder Now</a>
-        <i class="fa-solid fa-angle-right"></i>
       </div>
     </section>
     <div id="About">
@@ -79,7 +111,7 @@
           consectetur adipisicing elit. Minima saepe ducimus reprehenderit
           numquam obcaecati aspernatur, cumque voluptatibus quibusdam ad debitis
           culpa illo similique vitae, blanditiis velit atque tempore enim aut?
-          <div class="btn-about">
+          <div class="main-button">
             <a href="#">Oder Now</a>
             <i class="fa-solid fa-angle-right"></i>
           </div>
@@ -488,7 +520,7 @@
         </div>
       </div>
       <div class="ct">
-        <div class="main-button2">
+        <div class="main-button main-button2">
           <a href="#">Load more</a>
           <i class="fa-solid fa-angle-right" style="color: #ffffff"></i>
         </div>
@@ -503,32 +535,32 @@
         </div>
         <div class="order-box_right">
           <form action="#">
-            <div class="input">
-              <label for="name">Name</label> <br />
-              <input type="text" placeholder="Your Name" id="name" />
+            <div class="flex-container">
+              <div class="input">
+                <label for="name">Name</label> <br />
+                <input type="text" placeholder="Your Name" id="name" />
+              </div>
+              <div class="input">
+                <label for="number">Number</label> <br />
+                <input type="text" placeholder="Your Number" id="number" />
+              </div>
+              <div class="input">
+                <label for="order">Order</label> <br />
+                <input type="text" placeholder="Your order" id="order" />
+              </div>
+              <div class="input">
+                <label for="Email">Email</label> <br />
+                <input type="text" placeholder="Your Email" id="Email" />
+              </div>
+              <div class="input">
+                <label for="hmnod">How many order</label> <br />
+                <input type="text" placeholder="How many order" id="hmnod" />
+              </div>
+              <div class="input">
+                <label for="Address">Address</label> <br />
+                <input type="text" placeholder="Your Address" id="Address" />
+              </div>
             </div>
-            <div class="input">
-              <label for="number">Number</label> <br />
-
-              <input type="text" placeholder="Your Number" id="number" />
-            </div>
-            <div class="input">
-              <label for="order">Order</label> <br />
-              <input type="text" placeholder="Your order" id="order" />
-            </div>
-            <div class="input">
-              <label for="Email">Email</label> <br />
-              <input type="text" placeholder="Your Email" id="Email" />
-            </div>
-            <div class="input">
-              <label for="hmnod">How many order</label> <br />
-              <input type="text" placeholder="How many order" id="hmnod" />
-            </div>
-            <div class="input">
-              <label for="Address">Address</label> <br />
-              <input type="text" placeholder="Your Address" id="Address" />
-            </div>
-
             <a href="#" class="oder-btn">Order Now</a>
           </form>
         </div>

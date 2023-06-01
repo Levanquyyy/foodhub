@@ -10,7 +10,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 nav {
   width: 100%;
   height: 60px;
@@ -18,6 +17,69 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.section_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+.close-btn {
+  border: none;
+  right: var(--inline-padding-of-input);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--active-color);
+  opacity: 0;
+  visibility: hidden;
+}
+/* styling of input */
+.input {
+  color: var(--input-text-color);
+  width: 100%;
+  margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+  background: none;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-color);
+}
+/* input background change in focus */
+.input:focus ~ .fancy-bg {
+  border: 1px solid #fac031;
+  background: var(--focus-input-bg-color);
+}
+
+.input:focus ~ .search {
+  fill: #fac031;
+}
+
+.input:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
 }
 
 .logo {
@@ -33,6 +95,69 @@ nav ul {
   width: 100px;
 }
 
+.top_menu {
+  height: 100%;
+}
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
 nav .logo img {
   width: 100px;
   height: 49px;
@@ -40,6 +165,11 @@ nav .logo img {
 }
 nav ul {
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0 25px;
 }
 nav ul li {
   display: inline-block;
@@ -47,7 +177,8 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #000000;
+
   font-size: 17px;
   text-transform: capitalize;
   transition: 0.2s;
@@ -92,10 +223,12 @@ nav .icons i:hover {
   justify-content: space-between;
 }
 .delivery .delivery-container .delivery-l {
-  width: calc(60% - 20px);
   height: 100%;
-
-  margin: 0 10px;
+  flex: 0 0 calc(70% - 10px);
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .delivery .delivery-container .delivery-l .delivery-top {
   width: 100%;
@@ -204,22 +337,20 @@ select#select-field {
 
 /* right */
 .delivery .delivery-container .delivery-r {
-  width: calc(40% - 20px);
-
-  margin: 0 10px;
-  height: calc(100% - 42px);
-  position: relative;
+  flex: 0 0 30%;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .delivery .delivery-container .delivery-r .delivery-card {
   width: 95%;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  position: relative;
   margin-bottom: 20px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .delivery .delivery-container .delivery-r .delivery-card .delivery-img {
   width: 150px;
@@ -235,12 +366,7 @@ select#select-field {
 .delivery .delivery-container .delivery-r .delivery-card p {
   color: gray;
 }
-.delivery .delivery-container .delivery-r .delivery-card .delivery-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-}
+
 .delivery
   .delivery-container
   .delivery-r
@@ -283,11 +409,7 @@ input[type="number"]::-webkit-outer-spin-button {
   width: calc(15% - 10px);
   margin: 0 5px;
 }
-.delivery .delivery-container .delivery-r .delivery-card--bt {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+
 .delivery .delivery-container .delivery-r .delivery-card--bt .confirm {
   padding: 10px;
   width: 100%;
@@ -458,4 +580,180 @@ button:hover {
   position: absolute;
   right: 20px;
   bottom: 10px;
+}
+
+.menu-mobile {
+  width: 50%;
+  margin: 10px 190px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateX(300px);
+  max-height: 0;
+}
+.menu-mobile.show {
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  max-height: 370px;
+  position: fixed;
+  top: 55px;
+  background-color: #fac031;
+  z-index: 30;
+  right: -190px;
+}
+.btn_oder {
+  padding: 8px 40px;
+  background: #333;
+  border-radius: 20px;
+}
+.btn_oder:hover {
+  background: #fac031;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    background-color: #eeeeee;
+    z-index: 15;
+  }
+  nav .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  .logo {
+    margin: 0;
+  }
+  .search {
+    color: #fac031;
+  }
+  .fancy-bg {
+    background-color: #ffffff;
+  }
+  .input::placeholder {
+    color: #fac031;
+  }
+
+  .icons {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+
+  nav .logo img {
+    margin: 0;
+  }
+
+  nav ul li {
+    display: block;
+    background-color: red;
+  }
+  nav ul {
+    display: none;
+  }
+  ul.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px 0;
+    margin-right: 30px;
+    text-align: end;
+  }
+  ul.menu-container li {
+    list-style: none;
+    width: 100%;
+  }
+  ul.menu-container li a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .container-left {
+    display: none;
+  }
+  .container-right {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    height: 100%;
+  }
+  footer {
+    height: 100%;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+  }
+  footer .footer-main .footer-tag {
+    width: 100%;
+  }
+  .delivery {
+    height: 100%;
+    margin-top: 20px;
+  }
+  .delivery .delivery-container {
+    flex-direction: column-reverse;
+  }
+  .delivery .delivery-container .delivery-r .delivery-card .delivery-img {
+    flex: 0 0 calc(50% - 20px);
+    height: 100%;
+    margin: 0 10px;
+  }
+  h2#delivery-intro {
+    font-size: 18px;
+  }
+  .delivery-intro {
+    flex: 0 0 50%;
+  }
+  .delivery .delivery-container .delivery-r .delivery-card {
+    height: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  button {
+    width: 40px;
+  }
+  .delivery .delivery-container .delivery-r .delivery-card--bt .confirm {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 90%;
+  }
+  .delivery .delivery-container .delivery-r {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .delivery .delivery-container .delivery-l {
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .delivery .delivery-container .delivery-l .delivery-top form .input {
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .delivery .delivery-container .delivery-l .delivery-top {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
