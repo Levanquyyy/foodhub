@@ -581,9 +581,6 @@ footer .end span {
     flex-direction: column;
     justify-content: space-between;
   }
-  .profile-chef .box-l .box-l--content p {
-    text-align: center;
-  }
 
   .btn:link,
   .btn:visited {
@@ -606,6 +603,10 @@ footer .end span {
   .about-chef-l .about-content {
     text-align: center;
     align-items: center;
+  }
+  .profile-chef .box-l .box-l--content h3 {
+    text-align: center;
+    margin: 10px 0;
   }
   .box-btr,
   .box-btl p,
